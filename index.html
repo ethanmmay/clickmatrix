@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body class="background-GIF" id="bodyTag">
 
 
 
@@ -43,7 +43,7 @@
                             <h3 class="text-center">Click Stats</h3>
                             <div>Cash: <span class="text-gold" id="cashAmount">$0</span></div>
                             <div>Cash per program: <span class="text-gold" id="programValueArea">$25</span></div>
-                            <div>Passive Programs per second: <span class="text-gold" id="ppsArea">0</span></div>
+                            <div>Bot Programs per second: <span class="text-gold" id="ppsArea">0</span></div>
                         </div>
                     </div>
                 </div>
@@ -54,22 +54,22 @@
                         <!-- // SHOP & UPGRADES -->
                         <div class="card text-center p-3 w-100 h-100">
                             <h3>Shop</h3>
-                            <button class="item-passive-1 btn-hacker my-2" onclick="addBot(0)"><span
+                            <button class="btn-hacker my-2" id="botPriceButton0" onclick="addBot(0)"><span
                                     class="text-gold mr-3" id="botPrice0">$250</span>Bot
                                 1: Basic Botnets <span class="text-gold ml-3" id="botQuan0">x0</span></button>
-                            <button class="item-passive-1 btn-hacker my-2" onclick="addBot(1)"><span
-                                    class="text-gold mr-3" id="botPrice1">$750</span>Bot
+                            <button class="btn-hacker my-2" id="botPriceButton1" onclick="addBot(1)"><span
+                                    class="text-gold mr-3" id="botPrice1">$400</span>Bot
                                 2: Neural Networks<span class="text-gold ml-3" id="botQuan1">x0</span></button>
-                            <button class="item-passive-1 btn-hacker my-2" onclick="addBot(2)"><span
-                                    class="text-gold mr-3" id="botPrice2">$3000</span>Bot
+                            <button class="btn-hacker my-2" id="botPriceButton2" onclick="addBot(2)"><span
+                                    class="text-gold mr-3" id="botPrice2">$550</span>Bot
                                 3: Superintelligences <span class="text-gold ml-3" id="botQuan2">x0</span></button>
-                            <button class="item-passive-1 btn-hacker my-2" onclick="addHack(0)"><span
+                            <button class="btn-hacker my-2" id="hackPriceButton0" onclick="addHack(0)"><span
                                     class="text-gold mr-3" id="hackPrice0">$100</span>Hack
                                 1: Hackathons Attended <span class="text-gold ml-3" id="hackQuan0">x0</span></button>
-                            <button class="item-passive-1 btn-hacker my-2" onclick="addHack(1)"><span
+                            <button class="btn-hacker my-2" id="hackPriceButton1" onclick="addHack(1)"><span
                                     class="text-gold mr-3" id="hackPrice1">$500</span>Hack
                                 2: Mainframes Accessed <span class="text-gold ml-3" id="hackQuan1">x0</span></button>
-                            <button class="item-passive-1 btn-hacker my-2" onclick="addHack(2)"><span
+                            <button class="btn-hacker my-2" id="hackPriceButton2" onclick="addHack(2)"><span
                                     class="text-gold mr-3" id="hackPrice2">$1000</span>Hack
                                 3: Gov Agencies Evaded <span class="text-gold ml-3" id="hackQuan2">x0</span></button>
                         </div>
@@ -77,11 +77,9 @@
                     <div class="col-6 d-flex justify-content-center p-3">
                         <!-- // MORE STATS & EXTRAS -->
                         <div class="card w-100 h-100 text-center p-3">
-                            <h3>More Stats</h3>
-                            <div>Some Stat</div>
-                            <div>Some Stat</div>
-                            <div>Some Stat</div>
-                            <div>Some Stat</div>
+                            <h3>Options</h3>
+                            <button class="btn-hacker my-2" id="botImageButton" onclick="toggleBotImages()">Turn off New Bot Images</button>
+                            <button class="btn-hacker my-2" id="bgGIFButton" onclick="toggleBackground()">Turn off Background GIF</button>
                         </div>
                     </div>
                 </div>
@@ -89,12 +87,8 @@
                     <div class="col-12 p-3">
                         <!-- // YOUR BOTS & NAMES -->
                         <div class="card d-flex p-3">
-                            <h3 class="ml-3">Bots</h3>
-                            <div>
-                                <img src="https://robohash.org/Dave?set=set3" alt="Bot" width="150px" class="bot-img">
-                                <img src="https://robohash.org/John?set=set3" alt="Bot" width="150px" class="bot-img">
-                                <img src="https://robohash.org/Mark?set=set3" alt="Bot" width="150px" class="bot-img">
-                                <img src="https://robohash.org/Jake?set=set3" alt="Bot" width="150px" class="bot-img">
+                            <h3 class="ml-3">Bots <span id="botsAmountArea">x0</span></h3>
+                            <div id="botArea">
                             </div>
                         </div>
                     </div>
