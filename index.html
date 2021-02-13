@@ -31,7 +31,8 @@
                 </div>
                 <div class="row">
                     <!-- // CLICKER AREA -->
-                    <div class="col-12 click-area p-5 d-flex align-items-center justify-content-center">
+                    <div class="col-12 click-area p-5 d-flex align-items-center justify-content-center"
+                        id="clickerArea">
                         <img src="program.png" alt="make program image" class="position-absolute clicker-item"
                             onclick="makeProgram()" width="300px">
                     </div>
@@ -78,8 +79,12 @@
                         <!-- // MORE STATS & EXTRAS -->
                         <div class="card w-100 h-100 text-center p-3">
                             <h3>Options</h3>
-                            <button class="btn-hacker my-2" id="botImageButton" onclick="toggleBotImages()">Turn off New Bot Images</button>
-                            <button class="btn-hacker my-2" id="bgGIFButton" onclick="toggleBackground()">Turn off Background GIF</button>
+                            <button class="btn-hacker my-2" id="botImageButton" onclick="toggleBotImages()">Turn off New
+                                Bot Images</button>
+                            <button class="btn-hacker my-2" id="bgGIFButton" onclick="toggleBackground()">Turn off
+                                Background GIF</button>
+                            <button class="btn-hacker-off my-2" id="colorblindModeButton"
+                                onclick="toggleDeuteranopiaMode()">Turn on Deuteranopia Mode</button>
                         </div>
                     </div>
                 </div>

@@ -1,5 +1,3 @@
-
-
 let cash = 0
 let programs = 0
 let programValue = 25
@@ -8,6 +6,7 @@ let botTemplate = ""
 let botsAmount = 0
 let botImages = true
 let backgroundGIF = true
+let colorblindMode = false
 setInterval(collectAutoUpgrades, 1000)
 
 let botOne = {
@@ -158,7 +157,37 @@ function checkAffordable(upgradeIndex) {
         document.getElementById("hackPriceButton" + upgradeIndex).classList.remove("btn-hacker-off")
         document.getElementById("hackPriceButton" + upgradeIndex).classList.add("btn-hacker")
     }
-    
+
+}
+
+function toggleDeuteranopiaMode() {
+    if (colorblindMode) {
+        colorblindMode = false
+        for (let i = 0; i < document.getElementsByClassName("card").length; i++) {
+            document.getElementsByClassName("card")[i].classList.remove("card-deuteranopia")
+        }
+        for (let i = 0; i < document.getElementsByClassName("btn-hacker").length; i++) {
+            document.getElementsByClassName("btn-hacker")[i].classList.remove("btn-hacker-deuteranopia")
+        }
+        for (let i = 0; i < document.getElementsByClassName("btn-hacker-off").length; i++) {
+            document.getElementsByClassName("btn-hacker-off")[i].classList.remove("btn-hacker-off-deuteranopia")
+        }
+        document.getElementById("clickerArea").innerHTML = `<img src="program.png" alt="make program image"
+                            class="position-absolute clicker-item" onclick="makeProgram()" width="300px">`
+    } else {
+        colorblindMode = true
+        for (let i = 0; i < document.getElementsByClassName("card").length; i++) {
+            document.getElementsByClassName("card")[i].classList.add("card-deuteranopia")
+        }
+        for (let i = 0; i < document.getElementsByClassName("btn-hacker").length; i++) {
+            document.getElementsByClassName("btn-hacker")[i].classList.add("btn-hacker-deuteranopia")
+        }
+        for (let i = 0; i < document.getElementsByClassName("btn-hacker-off").length; i++) {
+            document.getElementsByClassName("btn-hacker-off")[i].classList.add("btn-hacker-off-deuteranopia")
+        }
+        document.getElementById("clickerArea").innerHTML = `<img src="program-deuteranopia.png" alt="make program image"
+                            class="position-absolute clicker-item" onclick="makeProgram()" width="300px">`
+    }
 }
 
 update()

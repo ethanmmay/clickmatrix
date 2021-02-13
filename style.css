@@ -26,6 +26,10 @@ body {
     background-color: rgba(0, 136, 0, 0.4);
 }
 
+.card-deuteranopia {
+    background-color: rgba(16, 0, 158, 0.4) !important;
+}
+
 .btn-hacker {
     border: 2px solid rgb(0, 136, 0);
     background-color: rgb(0, 0, 0);
@@ -35,9 +39,17 @@ body {
     outline: none !important;
 }
 
+.btn-hacker-deuteranopia {
+    border: 2px solid rgb(0, 0, 136) !important;
+}
+
 .btn-hacker:hover {
     border: 2px solid rgb(0, 255, 0);
     transition: 0.1s ease;
+}
+
+.btn-hacker-deuteranopia:hover {
+    border: 2px solid rgb(0, 17, 255) !important;
 }
 
 .btn-hacker-off {
@@ -51,6 +63,14 @@ body {
 
 .btn-hacker-off:hover {
     border: 2px solid rgb(136, 0, 0);
+}
+
+.btn-hacker-off-deuteranopia {
+    border: 2px dashed rgb(238, 255, 0) !important;
+}
+
+.btn-hacker-off-deuteranopia:hover {
+    border: 2px solid rgb(217, 255, 0) !important;
 }
 
 .text-gold {
